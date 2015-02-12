@@ -51,24 +51,28 @@ Auto-Test icon below the play button (see image) to toggle auto-testing (WebStor
 
 ![Mocha Runner output](./readme/images/mocha.png)
 
-## Or run it yourself (NOT RECOMMENDED, but necessary for WebStorm haters)
+## Or run it yourself
 
-The reason this is not recommended is because this project setup is optimized for TDD. In TDD, you want immediate feedback
-when a test fails. Any setup without auto-testing will not be ideal. That said, with some manual hacking, you can setup
-your own file watchers to re-run Mocha on any changes. This tutorial does not cover that process.
+First, install new dependencies:
 
-To compile, run the command:
+1. Install [Growl](http://growl.info/downloads#growlnotify)
+2. Run `npm install growl --save-dev`
+3. Run `sudo gem install terminal-notifier`
+4. Run `npm install supervisor -g`
+5. Run `npm run ts`
 
-    npm run ts
+This final step is the one that turns on the TDD process and is what you use going forward:
 
-To run tests (this also runs the `ts` command for you):
+    `npm run watch`
 
-    npm test
+For reference, these are the commands under the hood (but you shouldn't need to run them):
 
-You will need to run the above commands every time you make a change.
+    npm run ts # compiles typescript
+    npm test # runs tests
+
+It should reload the tests on each change.
 
 # Notes
-
 
 * Testing is done using two libraries. One is Mocha, a framework for writing assertions. The other is Sinon, a
 stubbing and mocking library.
