@@ -56,10 +56,7 @@ Auto-Test icon below the play button (see image) to toggle auto-testing (WebStor
 First, install new dependencies:
 
 1. Install [Growl](http://growl.info/downloads#growlnotify)
-2. Run `npm install growl --save-dev`
-3. Run `sudo gem install terminal-notifier`
-4. Run `npm install supervisor -g`
-5. Run `npm run ts`
+2. Run `sudo gem install terminal-notifier`
 
 This final step is the one that turns on the TDD process and is what you use going forward:
 
@@ -67,8 +64,8 @@ This final step is the one that turns on the TDD process and is what you use goi
 
 For reference, these are the commands under the hood (but you shouldn't need to run them):
 
-    npm run ts # compiles typescript
-    npm test # runs tests
+    npm run ts  # compiles typescript
+    npm test    # runs tests
 
 It should reload the tests on each change.
 
