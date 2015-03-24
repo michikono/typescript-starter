@@ -13,9 +13,9 @@ First install all dependencies:
 
     npm install
 
-Then you have two options: Use WebStorm or run it yourself.
+Then you have two options: Use (a) WebStorm or (b) run it yourself.
 
-## Using WebStorm (RECOMMENDED)
+## Using WebStorm
 
 1. Setup a Watcher by going to Preferences => Tools => File Watchers => + => TypeScript
 2. Change arguments to read `--sourcemap --target ES5 --module commonjs $FilePath$` and Hit OK
